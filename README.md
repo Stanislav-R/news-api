@@ -1,6 +1,12 @@
 # Test task for DevelopsToday
 
-###Deploy:
+### Project was deployed to AWS:
+http://ec2-3-15-151-255.us-east-2.compute.amazonaws.com/
+
+### Project was documented by Postman:
+https://documenter.getpostman.com/view/17380469/UVC8CkjY 
+
+###For local Deploy:
 
 For deployment to your PC use next steps:
 1. Clone repo: https://github.com/Stanislav-R/news-api.git
@@ -15,8 +21,6 @@ For deployment to your PC use next steps:
 7. Application will be available at: http://127.0.0.1:8000/
 
 ###Available api's:
-
-http://127.0.0.1:8000
 
 | API                           | Action                              |
 |-------------------------------|-------------------------------------|
