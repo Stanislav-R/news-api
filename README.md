@@ -7,23 +7,25 @@ For deployment to your PC use next steps:
 2. Create virtualenv and activate it:
    - python3 -m venv venv
    - venv/bin/activate
-3. Install all source packages: pip install -r requirements.txt
-4. Make migration: python manage.py migrate
-5. Run application: python manage.py runserver
-6. Application will be available at: http://127.0.0.1:8000/
+3. Install Docker
+4. Run in terminal docker-compose up --build
+5. Make migration: 
+   - python manage.py makemigrations
+   - python manage.py migrate
+7. Application will be available at: http://127.0.0.1:8000/
 
 ###Available api's:
 
-1. Users:
-   - /api/users/
-     - /register
-     - /login
-     - /user
-     - /logout
-2. Posts:
-   - /api/posts/
-     - /posts_list (CRUD)
-     - /likes_list (CRUD)
-3. Analytics:
-   - /api/users/activity (Last login & last request)
-   - /api/posts/analytics/?date_from=2021-01-01&date_to=2021-12-31 (Count of likes)
+http://127.0.0.1:8000
+
+| API                           | Action                              |
+|-------------------------------|-------------------------------------|
+| /posts/                       | Show all posts, Create a post       |
+| /comments/                    | Show all comments, Create a comment |
+| /posts/<int: post_id>/        | CRUD for a post with id             |
+| /comments/<int: comment_id>/  | CRUD for a comment with id          |
+| /posts/<int: post_id>/upvote/ | Endpoint to upvote the post         |
+
+###Code formatted with:
+1. Back
+2. Flake8

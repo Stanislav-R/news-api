@@ -9,5 +9,5 @@ router.register("comments", CommentsViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
-    url("posts/<int:pk>/upvote", UpvoteView.as_view()),
+    path("posts/<int:pk>/upvote/", UpvoteView.as_view()),
 ]

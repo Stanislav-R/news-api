@@ -13,5 +13,5 @@ def reset_count_votes():
 
 def start_job():
     global job
-    job = scheduler.add_job(reset_count_votes, "interval", seconds=120)
+    job = scheduler.add_job(reset_count_votes, "interval", hours=24)
     scheduler.start()

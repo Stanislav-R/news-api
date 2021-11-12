@@ -16,8 +16,8 @@ class CommentsViewSet(viewsets.ModelViewSet):
 
 
 class UpvoteView(views.APIView):
-    def get(self, pk):
-        post = generics.get_object_or_404(Post, pk)
+    def get(self, request, pk):
+        post = generics.get_object_or_404(Post, pk=pk)
         post.upvote()
 
         return Response({"message": f"Post #{pk} has been upvote"})
